@@ -13,13 +13,7 @@ export const ACTIONS = {
 
 const reducer = (state, { type, payload }) => {
   switch (type) {
-    case ACTIONS.INCREASE:
-      return {
-        ...state,
-        correct: state.correct + 1,
-      };
     case ACTIONS.MATCH:
-		console.log(payload)
       if (payload) {
         return { ...state, correct: state.correct + 1 };
       } else {
